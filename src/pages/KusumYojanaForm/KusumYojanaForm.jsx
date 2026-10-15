@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { supabase } from '../../lib/supabase';
+import { supabase, supabaseReady } from '../../lib/supabase';
 import { cleanPhone, isValidPhone, PHONE_LENGTH, PHONE_ERROR } from '../../utils/phone';
 
 const MAX_SUBSTATION_KM = 3;
@@ -69,6 +69,7 @@ export default function KusumYojanaForm() {
     const found = validate();
     setErrors(found);
     if (Object.keys(found).length) { toast.error('कृपया सभी आवश्यक जानकारी सही भरें'); return; }
+    if (!supabaseReady) { toast.error('Database is not configured: set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in .env and rebuild'); return; }
     setSaving(true);
     const { error } = await supabase.from('kusum_land_proposals').insert({
       owner_name: form.ownerName.trim(),
