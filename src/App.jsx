@@ -20,8 +20,7 @@ function App() {
         <Toaster position="top-center" toastOptions={{ duration: 3000 }} />
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Navigate to="/kusum-yojana-form" replace />} />
-            <Route path="kusum-yojana-form" element={page(KusumYojanaForm)} />
+            <Route index element={page(KusumYojanaForm)} />
           </Route>
 
           <Route path="*" element={<Navigate to="/" replace />} />
