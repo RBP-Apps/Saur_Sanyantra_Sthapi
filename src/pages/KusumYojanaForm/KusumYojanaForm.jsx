@@ -108,7 +108,7 @@ export default function KusumYojanaForm() {
       <form onSubmit={handleSubmit} noValidate onFocus={keepFieldVisible} className="flex-1 flex flex-col min-h-0 w-full">
         <header className="flex-shrink-0 bg-[#14301f] px-4 py-3 md:py-4">
           <div className="max-w-3xl mx-auto space-y-1 text-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">कुसुम योजना – भूमि प्रस्ताव फॉर्म</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-white leading-tight">सौर संयंत्र स्थापित – भूमि प्रस्ताव फॉर्म</h1>
             <p className="text-base md:text-lg text-[#e8b923] leading-snug">सौर संयंत्र हेतु 50 एकड़ भूमि, 25 वर्षों की अवधि तक किराए पर</p>
           </div>
         </header>
